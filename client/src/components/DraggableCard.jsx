@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Card from './Card';
 
 
-function DraggableCard() {
+function DraggableCard({ CardContent }) {
 
   const [flip, setFlip] = useState(false)
   const [dragging, setDragging] = useState(false)
@@ -35,7 +35,7 @@ function DraggableCard() {
       onStop={onStop}
     >
       <div>
-        <Card flip={flip ? "card flip" : "card"} />
+        <Card flip={flip ? "card flip" : "card"} CardContent={CardContent} />
       </div>
     </Draggable>
   )

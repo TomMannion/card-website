@@ -9,23 +9,41 @@
     rotate(var(--rotate, 0deg));
   transition: transform 0.7s;
   transform-style: preserve-3d;
+  //drop shadow
+  -moz-box-shadow: 0 0 3px rgb(6, 5, 5);
+  -webkit-box-shadow: 0 0 3px rgb(5, 5, 5);
+  box-shadow: 0 0 3px rgba(88, 67, 2, 0.5);
   cursor: pointer;
-  height: 300px;
-  width: 200px;
-  background-color: rgb(219, 14, 14);
+  height: 350px;
+  width: 215px;
+  & .trans-back { 
+    transform: translate(0px, 0px);
+    transition: transform 2s;
+  }
 }
 
 .front {
+  background-size: cover;
   position: absolute;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
 }
 
 .back {
   position: absolute;
+  background-color: rgb(233, 206, 156);
+  border-radius: 20px;
+  text-align: center;
   width: 100%;
   height: 100%;
   transform: rotateY(180deg);
+}
+
+.back-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .front, .back {
@@ -35,6 +53,54 @@
   transition: transform 1s;
 }
 
+.img-size {  
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  height: 30%;
+}
+
+
 .card.flip {
   --rotate-y: -180deg;
+  & .javascript {
+    transform: translate(-120px, 100px);
+    transition: transform 2s;
+  }
+  & .react {
+    transform: translate(100px, 100px);
+    transition: transform 2s;
+  }
+  & .ruby {
+    transform: translate(0px, 100px);
+    transition: transform 2s;
+  }
+  & .python {
+    transform: translate(-30px, 190px);
+    transition: transform 2s;
+  }
+  & .typescript {
+    transform: translate(120px, 0px);
+    transition: transform 2s;
+  }
+}
+
+.skills {
+  background-image: url("../assets/Skill_card.png");
+}
+
+.education {
+  background-image: url("../assets/Mystic_cat.png");
+}
+
+.interests {
+  background-image: url("../assets/Cat_at_comp.png");
+}
+
+.place {
+  background-image: url("../assets/Queen_cat.png");
+}
+
+.place2 {
+  background-image: url("../assets/Egyptian_Cat.png");
 }
