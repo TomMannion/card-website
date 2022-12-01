@@ -1,15 +1,25 @@
-import Draggable from 'react-draggable';
-import { useState } from 'react';
-import Card from './Card';
+import Draggable from "react-draggable";
+import { useState, useRef } from "react";
+import Card from "./Card";
 
+function DraggableCard({
+  CardContent,
+  cardClass,
+  setZIndex,
+  zindex,
+  slide,
+  amount,
+}) {
+  const [flip, setFlip] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const [currentZIndex, setCurrentZIndex] = useState(0);
 
-function DraggableCard({ CardContent }) {
-
-  const [flip, setFlip] = useState(false)
-  const [dragging, setDragging] = useState(false)
+  const setZIndexToCard = () => {
+    setZIndex(zindex + 1);
+  };
 
   function onClick(event) {
-    setFlip(!flip)
+    setFlip(!flip);
   }
 
   function onDrop(event) {
@@ -17,28 +27,32 @@ function DraggableCard({ CardContent }) {
   }
 
   function onDrag() {
-    setDragging(true)
+    setDragging(true);
+    setZIndexToCard();
+    setCurrentZIndex(zindex + 10);
   }
 
   function onStop(...args) {
-    setDragging(false)
+    setDragging(false);
     if (dragging) {
-      onDrop(...args)
+      onDrop(...args);
     } else {
-      onClick(...args)
+      onClick(...args);
     }
   }
 
   return (
-    <Draggable
-      onDrag={onDrag}
-      onStop={onStop}
-    >
-      <div>
-        <Card flip={flip ? "card flip" : "card"} CardContent={CardContent} />
+    <Draggable onDrag={onDrag} onStop={onStop} className={`${cardClass}`}>
+      <div style={{ zIndex: currentZIndex, position: "relative" }}>
+        <Card
+          flip={flip ? "card flip" : "card"}
+          CardContent={CardContent}
+          slide={slide}
+          amount={amount}
+        />
       </div>
     </Draggable>
-  )
+  );
 }
 
-export default DraggableCard
+export default DraggableCard;

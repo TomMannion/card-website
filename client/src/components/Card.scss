@@ -1,8 +1,6 @@
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+ .card {
+  position: absolute;
   border-radius: 20px;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0deg))
     translate(var(--translate-y, 0))
@@ -14,17 +12,21 @@
   -webkit-box-shadow: 0 0 3px rgb(5, 5, 5);
   box-shadow: 0 0 3px rgba(88, 67, 2, 0.5);
   cursor: pointer;
-  height: 350px;
-  width: 215px;
+  height: 360px;
+  width: 240px;
   & .trans-back { 
     transform: translate(0px, 0px);
     transition: transform 2s;
   }
+  left: 40%;
+  top: 50%;
 }
 
 .front {
   background-size: cover;
   position: absolute;
+  justify-content: center;
+  display: flex;
   border-radius: 20px;
   width: 100%;
   height: 100%;
@@ -86,21 +88,23 @@
 }
 
 .skills {
-  background-image: url("../assets/Skill_card.png");
+  background-image: url("../assets/cat_1.png");
 }
 
 .education {
-  background-image: url("../assets/Mystic_cat.png");
+  background-image: url("../assets/cat_2.png");
 }
 
 .interests {
-  background-image: url("../assets/Cat_at_comp.png");
+  background-image: url("../assets/cat_3.png");
 }
 
 .place {
-  background-image: url("../assets/Queen_cat.png");
+  background-image: url("../assets/cat_4.png");
 }
 
 .place2 {
-  background-image: url("../assets/Egyptian_Cat.png");
+  background-image: url("../assets/cat_5.png");
 }
+
+

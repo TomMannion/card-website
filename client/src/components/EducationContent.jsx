@@ -5,7 +5,7 @@ function EducationCard() {
     return (
         <>
           <div className="education front">
-            <h1>Education</h1>
+            <h1>Place</h1>
           </div>
           <div className="back">
             <h1>Back</h1>

@@ -11,7 +11,7 @@ function Card() {
   return (
       <>
         <div className="skills front">
-          <h1>Skills</h1>
+          <h1>Place</h1>
         </div>
         <div className="back">
           <h1>Back</h1>

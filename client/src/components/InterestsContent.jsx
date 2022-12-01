@@ -5,7 +5,7 @@ function InterestsCard() {
     return (
         <>
           <div className="interests front">
-            <h1>Interests</h1>
+            <h1>Place</h1>
           </div>
           <div className="back">
             <h1>Back</h1>
