@@ -12,14 +12,12 @@
   -webkit-box-shadow: 0 0 3px rgb(5, 5, 5);
   box-shadow: 0 0 3px rgba(88, 67, 2, 0.5);
   cursor: pointer;
-  height: 360px;
-  width: 240px;
+  height: 370px;
+  width: 250px;
   & .trans-back { 
     transform: translate(0px, 0px);
     transition: transform 2s;
   }
-  left: 40%;
-  top: 50%;
 }
 
 .front {
@@ -85,26 +83,146 @@
     transform: translate(120px, 0px);
     transition: transform 2s;
   }
+  //about transitions
+  & .block-1 {
+    transform: translate(-50px, -20px);
+    transition: transform 2s;
+  }
+  & .block-2 {
+    transform: translate(50px, 20px);
+    transition: transform 2s;
+  }
+}
+
+.grid-wrap {
+  width: 100vw;
+}
+
+.button-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills {
-  background-image: url("../assets/cat_1.png");
+  background-image: url("../assets/skills.png");
 }
 
-.education {
-  background-image: url("../assets/cat_2.png");
+.experience {
+  background-image: url("../assets/experience.png");
 }
 
-.interests {
-  background-image: url("../assets/cat_3.png");
+.about {
+  background-image: url("../assets/about.png");
 }
 
-.place {
-  background-image: url("../assets/cat_4.png");
+.contact {
+  background-image: url("../assets/contact.png");
 }
 
-.place2 {
-  background-image: url("../assets/cat_5.png");
+.projects {
+  background-image: url("../assets/projects.png");
 }
+
+//animate the hand to move backwards and forwards
+@keyframes hand {
+  0% {
+    transform: translateX(0) translateY(40px) rotate(40deg);
+  }
+  50% {
+    transform: translateX(10px) translateY(40px) rotate(50deg);
+  }
+  100% {
+    transform: translateX(0) translateY(40px) rotate(40deg);
+  }
+}
+
+
+.hand {
+  position: absolute;
+  height: 50px;
+  z-index: 1;
+  animation: hand 1s infinite;
+}
+
+//position the hand next to the deal-button always
+
+//position the deal-button always
+.deal-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card {
+    left: 0%;
+    top: 50px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .card {
+    left: 15%;
+    top: 110px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    left: 25%;
+    top: 120px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    left: 25%;
+    top: 150px;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    height: 485px;
+    width: 325px;
+    left: 30%;
+    top: 30px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+// About styling
+.block-1 {
+  position: absolute;
+  top: 90px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(206, 142, 69);
+  font-size: 20px;
+}
+
+.block-2 {
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(206, 142, 69);
+  font-size: 20px;
+}
+
+
 
 

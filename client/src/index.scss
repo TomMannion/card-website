@@ -6,9 +6,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("./assets/stockvault-red-velvet.jpg");
-  // background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,11 +14,10 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-width: 600px;
-  min-height: 100vh;
-  width: auto;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 

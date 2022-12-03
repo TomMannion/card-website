@@ -13,21 +13,21 @@ function Card({ flip, CardContent, zindex, slide, amount }) {
   };
 
   const doTransform = () => {
-    if (!slide) {
+    if (slide) {
       spreadAmountCard();
-      console.log("spreadAmount", spreadAmount);
     }
     if (flip === "card") {
       setTranslate(`translate(${x}px, ${y}px)`);
     } else {
-      setTranslate(`translate(${x}px, ${y}px) rotateY(-180deg)`);
+      setTranslate(
+        `perspective(1000px) translate(${x}px, ${y}px) rotateY(-180deg)`
+      );
     }
   };
 
   useEffect(() => {
     doTransform();
-    console.log(zindex);
-  }, [slide, flip, zindex]);
+  }, [spreadAmount, flip, zindex, slide]);
 
   const styles = {
     transform: translate,

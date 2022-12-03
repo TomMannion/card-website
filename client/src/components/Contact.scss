@@ -1,0 +1,44 @@
+.linkedin {
+  position: absolute;
+  top:20%;
+  width: 170px;
+  height: 50px;
+  background-color: blueviolet;
+  border-radius: 15px;
+}
+.github {
+  position: absolute;
+  left: 38%;
+  top: 40%;
+  width: 170px;
+  height: 50px;
+  background-color: blueviolet;
+  border-radius: 15px;
+}
+.email {
+  position: absolute;
+  top: 60%;
+  width: 170px;
+  height: 50px;
+  background-color: blueviolet;
+  border-radius: 15px;
+}
+
+.card.flip {
+  & .linkedin {
+    transform: translate(-50px, -20px);
+    transition: transform 2s;
+  }
+  & .github {
+    transform: translate(50px, 10px);
+    transition: transform 2s;
+  }
+  & .email {
+    transform: translate(-50px, -20px);
+    transition: transform 2s;
+  }
+}
+
+a {
+  text-decoration: none;
+}

@@ -43,7 +43,10 @@ function DraggableCard({
 
   return (
     <Draggable onDrag={onDrag} onStop={onStop} className={`${cardClass}`}>
-      <div style={{ zIndex: currentZIndex, position: "relative" }}>
+      <div
+        className="drag-wrapper"
+        style={{ zIndex: currentZIndex, position: "relative" }}
+      >
         <Card
           flip={flip ? "card flip" : "card"}
           CardContent={CardContent}
