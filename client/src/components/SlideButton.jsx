@@ -1,13 +1,14 @@
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import hand from "../assets/hand_pointing_edit.png";
+import banner from "../assets/banner.png";
 
 function SlideButton({ spreadCards, resetAllCards }) {
   const [reset, setReset] = useState(true);
 
   return reset ? (
     <div className="hand-wrapper">
-      <Button
+      {/* <Button
         className="deal-button"
         variant="contained"
         onClick={() => {
@@ -17,7 +18,15 @@ function SlideButton({ spreadCards, resetAllCards }) {
         }}
       >
         Deal the Cards
-      </Button>
+      </Button> */}
+      <div
+        className="deal-button"
+        onClick={() => {
+          spreadCards();
+          resetAllCards();
+          setReset(!reset);
+        }}
+      ></div>
       <img className="hand" src={hand} alt="reset" />
     </div>
   ) : (

@@ -140,6 +140,7 @@
 
 .hand {
   position: absolute;
+  left:170px;
   height: 50px;
   z-index: 1;
   animation: hand 1s infinite;
@@ -150,11 +151,20 @@
 //position the deal-button always
 .deal-button {
   position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
+  // add background image banner from assets
+  background-image: url("../assets/banner.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  z-index: 0;
 }
 
+.hand-wrapper {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
