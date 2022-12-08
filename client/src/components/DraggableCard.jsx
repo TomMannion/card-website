@@ -12,6 +12,12 @@ function DraggableCard({
 }) {
   const [flip, setFlip] = useState(false);
   const [dragging, setDragging] = useState(false);
+  //previous location of the card
+  const [prevX, setPrevX] = useState(0);
+  const [prevY, setPrevY] = useState(0);
+  //set current location of the card
+  const [currentX, setCurrentX] = useState(0);
+  const [currentY, setCurrentY] = useState(0);
   const [currentZIndex, setCurrentZIndex] = useState(0);
 
   const setZIndexToCard = () => {
@@ -23,11 +29,16 @@ function DraggableCard({
   }
 
   function onDrop(event) {
-    // your code
+    // set current location of the card
+    setCurrentX(event.clientX);
+    setCurrentY(event.clientY);
   }
 
-  function onDrag() {
+  function onDrag(event) {
     setDragging(true);
+    // set previous location of the card
+    setPrevX(event.clientX);
+    setPrevY(event.clientY);
     setZIndexToCard();
     setCurrentZIndex(zindex + 10);
   }
@@ -36,6 +47,12 @@ function DraggableCard({
     setDragging(false);
     if (dragging) {
       onDrop(...args);
+      if (
+        (prevX - currentX) * (prevX - currentX) < 800 &&
+        (prevY - currentY) * (prevY - currentY) < 800
+      ) {
+        onClick(...args);
+      }
     } else {
       onClick(...args);
     }
