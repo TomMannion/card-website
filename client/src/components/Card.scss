@@ -139,38 +139,50 @@
 
 
 .hand {
-  position: absolute;
-  left:170px;
   height: 50px;
   z-index: 1;
   animation: hand 1s infinite;
 }
 
-//position the hand next to the deal-button always
-
-//position the deal-button always
-.deal-button {
-  position: absolute;
-  // add background image banner from assets
-  background-image: url("../assets/banner.png");
-  background-size: 200px;
-  background-repeat: no-repeat;
-  height: 100px;
-  width: 200px;
+.reset-button {
+  background-image: url("../assets/bannerreset.png");
+  margin-left: 80px;
   z-index: 0;
+  cursor: pointer;
+}
+
+.deal-button {
+  background-image: url("../assets/banner.png");
+  margin-left: 80px;
+  z-index: 0;
+  cursor: pointer;
 }
 
 .hand-wrapper {
-  position: relative;
-  height: 100px;
-  width: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .card {
     left: 0%;
-    top: 50px;
+  }
+  .reset-button {
+    background-size: 240px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 240px;
+  }
+  .deal-button {
+    background-size: 240px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 240px;
+  }
+  .hand {
+    padding-top: 20px;
+    height: 40px;
   }
 }
 
@@ -178,7 +190,23 @@
 @media only screen and (min-width: 600px) {
   .card {
     left: 15%;
-    top: 110px;
+    // top: 110px;
+  }
+  .reset-button {
+    background-size: 280px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 280px;
+  }
+  .deal-button {
+    background-size: 280px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 280px;
+  }
+  .hand {
+    padding-top: 20px;
+    height: 40px;
   }
 }
 
@@ -186,7 +214,22 @@
 @media only screen and (min-width: 768px) {
   .card {
     left: 25%;
-    top: 120px;
+  }
+  .reset-button {
+    background-size: 280px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 280px;
+  }
+  .deal-button {
+    background-size: 280px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 280px;
+  }
+  .hand {
+    padding-top: 20px;
+    height: 40px;
   }
 }
 
@@ -194,7 +237,22 @@
 @media only screen and (min-width: 992px) {
   .card {
     left: 25%;
-    top: 150px;
+  }
+  .reset-button {
+    background-size: 350px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 350px;
+  }
+  .deal-button {
+    background-size: 350px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 350px;
+  }
+  .hand {
+    padding-top: 50px;
+    height: 50px;
   }
 }
 
@@ -205,7 +263,23 @@
     height: 485px;
     width: 325px;
     left: 30%;
-    top: 30px;
+    top: 50px;
+  }
+  .reset-button {
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 400px;
+  }
+  .deal-button {
+    background-size: 400px;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 400px;
+  }
+  .hand {
+    padding-top: 50px;
+    height: 50px;
   }
 }
 

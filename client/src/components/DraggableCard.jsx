@@ -26,6 +26,8 @@ function DraggableCard({
 
   function onClick(event) {
     setFlip(!flip);
+    setZIndexToCard();
+    setCurrentZIndex(zindex + 10);
   }
 
   function onDrop(event) {
@@ -48,8 +50,8 @@ function DraggableCard({
     if (dragging) {
       onDrop(...args);
       if (
-        (prevX - currentX) * (prevX - currentX) < 800 &&
-        (prevY - currentY) * (prevY - currentY) < 800
+        (prevX - currentX) * (prevX - currentX) < 2000 &&
+        (prevY - currentY) * (prevY - currentY) < 2000
       ) {
         onClick(...args);
       }

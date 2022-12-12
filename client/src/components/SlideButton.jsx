@@ -8,17 +8,6 @@ function SlideButton({ spreadCards, resetAllCards }) {
 
   return reset ? (
     <div className="hand-wrapper">
-      {/* <Button
-        className="deal-button"
-        variant="contained"
-        onClick={() => {
-          spreadCards();
-          resetAllCards();
-          setReset(!reset);
-        }}
-      >
-        Deal the Cards
-      </Button> */}
       <div
         className="deal-button"
         onClick={() => {
@@ -30,16 +19,17 @@ function SlideButton({ spreadCards, resetAllCards }) {
       <img className="hand" src={hand} alt="reset" />
     </div>
   ) : (
-    <Button
-      variant="contained"
-      onClick={() => {
-        spreadCards();
-        window.location.reload(false);
-        setReset(!reset);
-      }}
-    >
-      Reset Cards
-    </Button>
+    <div className="hand-wrapper">
+      <div
+        className="reset-button"
+        onClick={() => {
+          spreadCards();
+          window.location.reload(false);
+          setReset(!reset);
+        }}
+      ></div>
+      <img className="hand" src={hand} alt="reset" />
+    </div>
   );
 }
 
