@@ -4,7 +4,7 @@ import AnotherCard from "./Skills";
 import EducationCard from "./Experience";
 import InterestsCard from "./Projects";
 import PlaceCard from "./Contact";
-import PlaceCard2 from "./About";
+import About from "./About";
 import SlideButton from "./SlideButton";
 import Grid from "@mui/material/Unstable_Grid2";
 
@@ -14,7 +14,7 @@ function CardGroup() {
     <EducationCard />,
     <InterestsCard />,
     <PlaceCard />,
-    <PlaceCard2 />,
+    <About />,
   ];
   const [slide, setSlide] = useState(false);
   const [zindex, setZIndex] = useState(0);

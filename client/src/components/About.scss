@@ -1,0 +1,60 @@
+.block-1 {
+  position: absolute;
+  top: 90px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(206, 142, 69);
+  font-size: 20px;
+}
+
+.block-2 {
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(206, 142, 69);
+  font-size: 20px;
+}
+
+img.learning {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  top: 70%;
+  left: 70%;
+}
+
+a.typewriter {
+  color: rgb(206, 142, 69);
+
+}
+
+// .typewriter h1 {
+//   overflow: hidden; /* Ensures the content is not revealed until the animation */
+//   border-right: .15em solid orange; /* The typwriter cursor */
+//   white-space: nowrap; /* Keeps the content on a single line */
+//   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+//   letter-spacing: .15em; /* Adjust as needed */
+// }
+
+// .card.flip {
+//   //animate typing
+//   & .typewriter h1 {
+//     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+//   }
+// }
+
+// /* The typing effect */
+// @keyframes typing {
+//   from { width: 0 }
+//   to { width: 100% }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+//   from, to { border-color: transparent }
+//   50% { border-color: orange; }
+// }
