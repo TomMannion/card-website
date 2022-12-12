@@ -32,17 +32,28 @@ function DraggableCard({
     setCurrentZIndex(zindex + 10);
   }
 
-  function onDrop(event) {
-    // set current location of the card
-    setCurrentX(event.clientX);
-    setCurrentY(event.clientY);
+  // also work for on touch
+  function onTouchStart(event) {
+    setFlip(!flip);
+    setZIndexToCard();
+    setCurrentZIndex(zindex + 10);
   }
+
+  function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY,
+    };
+  }
+
+  function onDrop(event) {}
 
   function onDrag(event) {
     setDragging(true);
     // set previous location of the card
-    setPrevX(event.clientX);
-    setPrevY(event.clientY);
+    setPrevX(getOffset(event.target).left);
+    setPrevY(getOffset(event.target).top);
     setZIndexToCard();
     setCurrentZIndex(zindex + 10);
     if (reset) {
@@ -50,34 +61,30 @@ function DraggableCard({
     }
   }
 
-  //on touch devices, the click event is not fired
-  function onTouch(event) {
-    setFlip(!flip);
-    setZIndexToCard();
-    setCurrentZIndex(zindex + 10);
-  }
-
   function onStop(...args) {
+    setCurrentX(getOffset(event.target).left);
+    setCurrentY(getOffset(event.target).top);
     setDragging(false);
+    // set current location of the card
     if (dragging) {
       onDrop(...args);
-      if (
-        (prevX - currentX) * (prevX - currentX) < 2000 &&
-        (prevY - currentY) * (prevY - currentY) < 2000
-      ) {
+      console.log("prevX", prevX);
+      console.log("currentX", currentX);
+      console.log("prevY", prevY);
+      console.log("currentY", currentY);
+      if (Math.abs(currentX - prevX) < 20 && Math.abs(currentY - prevY) < 20) {
         onClick(...args);
-        onTouch(...args);
       }
     } else {
       onClick(...args);
-      onTouch(...args);
     }
   }
 
   return (
-    <Draggable onDrag={onDrag} onStop={onStop} className={`${cardClass}`}>
+    //add on touch to draggable
+    <Draggable onDrag={onDrag} onStop={onStop}>
       <div
-        className="drag-wrapper"
+        className={`drag-wrapper ${cardClass}`}
         style={{ zIndex: currentZIndex, position: "relative" }}
       >
         <Card

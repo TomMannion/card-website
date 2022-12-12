@@ -5,27 +5,40 @@ import github from "../assets/github.png";
 import email from "../assets/email.png";
 
 function PlaceCard() {
+  //onTouchStart={handleTouchStart}
+  function handleTouchStart(link) {
+    //redirect to linkedin
+    console.log("touch start");
+    window.open(`${link}`, "_blank");
+  }
+
   return (
     <>
       <div className="contact front"></div>
       <div className="back">
-        <div className="linkedin trans-back">
-          <a
-            href="https://www.linkedin.com/in/thomas-mannion-/"
-            target="_blank"
-          >
-            <img className="contact-img" src={linkedin} alt="linkedin" />
-          </a>
+        <div
+          onTouchStart={() => {
+            handleTouchStart("https://www.linkedin.com/in/thomas-mannion-/");
+          }}
+          className="linkedin trans-back"
+        >
+          <img className="contact-img" src={linkedin} alt="linkedin" />
         </div>
-        <div className="github trans-back">
-          <a href="https://github.com/TomMannion" target="_blank">
-            <img className="contact-img" src={github} alt="github" />
-          </a>
+        <div
+          onTouchStart={() => {
+            handleTouchStart("https://www.github.com/TomMannion");
+          }}
+          className="github trans-back"
+        >
+          <img className="contact-img" src={github} alt="github" />
         </div>
-        <div className="email trans-back">
-          <a href="mailto:tmannion89@gmail.com" target="_blank">
-            <img className="contact-img" src={email} alt="email" />
-          </a>
+        <div
+          onTouchStart={() => {
+            handleTouchStart("mailto:tmannion89@gmail.com");
+          }}
+          className="email trans-back"
+        >
+          <img className="contact-img" src={email} alt="email" />
         </div>
         <div className="back-content"></div>
       </div>
