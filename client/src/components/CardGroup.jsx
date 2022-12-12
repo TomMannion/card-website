@@ -19,6 +19,7 @@ function CardGroup() {
   const [slide, setSlide] = useState(false);
   const [zindex, setZIndex] = useState(0);
   const [resetAll, setResetAll] = useState(false);
+  const [reset, setReset] = useState(true);
 
   const amount = 60;
 
@@ -33,7 +34,12 @@ function CardGroup() {
   return (
     <Grid container spacing={2} className="grid-wrap">
       <Grid item xs={12} className="button-grid">
-        <SlideButton spreadCards={spreadCards} resetAllCards={resetAllCards} />
+        <SlideButton
+          spreadCards={spreadCards}
+          resetAllCards={resetAllCards}
+          reset={reset}
+          setReset={setReset}
+        />
       </Grid>
       <Grid item xs={12} className="card-grid">
         <div className="card-group">
@@ -44,6 +50,8 @@ function CardGroup() {
                 CardContent={card}
                 cardClass={`card-${index}`}
                 setZIndex={setZIndex}
+                reset={reset}
+                setReset={setReset}
                 zindex={zindex}
                 slide={slide}
                 amount={index * amount}

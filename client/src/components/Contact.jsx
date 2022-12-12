@@ -10,17 +10,20 @@ function PlaceCard() {
       <div className="contact front"></div>
       <div className="back">
         <div className="linkedin trans-back">
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/thomas-mannion-/"
+            target="_blank"
+          >
             <img className="contact-img" src={linkedin} alt="linkedin" />
           </a>
         </div>
         <div className="github trans-back">
-          <a href="">
+          <a href="https://github.com/TomMannion" target="_blank">
             <img className="contact-img" src={github} alt="github" />
           </a>
         </div>
         <div className="email trans-back">
-          <a href="">
+          <a href="mailto:tmannion89@gmail.com" target="_blank">
             <img className="contact-img" src={email} alt="email" />
           </a>
         </div>

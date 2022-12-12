@@ -9,6 +9,8 @@ function DraggableCard({
   zindex,
   slide,
   amount,
+  reset,
+  setReset,
 }) {
   const [flip, setFlip] = useState(false);
   const [dragging, setDragging] = useState(false);
@@ -43,6 +45,16 @@ function DraggableCard({
     setPrevY(event.clientY);
     setZIndexToCard();
     setCurrentZIndex(zindex + 10);
+    if (reset) {
+      setReset(!reset);
+    }
+  }
+
+  //on touch devices, the click event is not fired
+  function onTouch(event) {
+    setFlip(!flip);
+    setZIndexToCard();
+    setCurrentZIndex(zindex + 10);
   }
 
   function onStop(...args) {
@@ -54,9 +66,11 @@ function DraggableCard({
         (prevY - currentY) * (prevY - currentY) < 2000
       ) {
         onClick(...args);
+        onTouch(...args);
       }
     } else {
       onClick(...args);
+      onTouch(...args);
     }
   }
 
