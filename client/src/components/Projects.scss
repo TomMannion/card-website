@@ -1,0 +1,125 @@
+.back-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  position: absolute;
+  background-color: #edb362;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+.less-waste {
+  background-image: url(../assets/blankback.png);
+  z-index: 1;
+}
+.acebook {
+  background-image: url(../assets/blankback.png);
+  z-index: 0;
+}
+.brewmate {
+  background-image: url(../assets/blankback.png);
+  z-index: 0;
+}
+
+//animate acebook to slide out from under less-waste
+  @keyframes slide-right {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(220px, 0);
+    }
+  }
+
+  @keyframes slide-right-back {
+    0% {
+      transform: translate(220px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-220px, 0);
+    }
+  }
+
+  @keyframes slide-left-back {
+    0% {
+      transform: translate(-220px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .card.flip {
+    & .acebook {
+      animation: slide-right 2s forwards;
+    }
+    & .brewmate {
+      animation: slide-left 2s forwards;
+    }
+  }
+
+  .card {
+    & .acebook {
+      animation: slide-right-back 2s forwards;
+    }
+    & .brewmate {
+      animation: slide-left-back 2s forwards;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    @keyframes slide-right {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(300px, 0);
+      }
+    }
+  
+    @keyframes slide-right-back {
+      0% {
+        transform: translate(300px, 0);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes slide-left {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-300px, 0);
+      }
+    }
+  
+    @keyframes slide-left-back {
+      0% {
+        transform: translate(-300px, 0);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+  }

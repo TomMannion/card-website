@@ -20,6 +20,9 @@ function PlaceCard() {
           onTouchStart={() => {
             handleTouchStart("https://www.linkedin.com/in/thomas-mannion-/");
           }}
+          onClickEnd={() => {
+            handleTouchStart("https://www.linkedin.com/in/thomas-mannion-/");
+          }}
           className="linkedin trans-back"
         >
           <img className="contact-img" src={linkedin} alt="linkedin" />
@@ -28,12 +31,18 @@ function PlaceCard() {
           onTouchStart={() => {
             handleTouchStart("https://www.github.com/TomMannion");
           }}
+          onClickEnd={() => {
+            handleTouchStart("https://www.github.com/TomMannion");
+          }}
           className="github trans-back"
         >
           <img className="contact-img" src={github} alt="github" />
         </div>
         <div
           onTouchStart={() => {
+            handleTouchStart("mailto:tmannion89@gmail.com");
+          }}
+          onClickEnd={() => {
             handleTouchStart("mailto:tmannion89@gmail.com");
           }}
           className="email trans-back"

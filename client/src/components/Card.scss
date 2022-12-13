@@ -32,7 +32,8 @@
 
 .back {
   position: absolute;
-  background-color: rgb(233, 206, 156);
+  // background image of blankback from assets
+  background-image: url(../assets/blankback.png);
   border-radius: 20px;
   text-align: center;
   width: 100%;
@@ -285,27 +286,6 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-// About styling
-.block-1 {
-  position: absolute;
-  top: 90px;
-  width: 220px;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: rgb(206, 142, 69);
-  font-size: 20px;
-}
-
-.block-2 {
-  position: absolute;
-  left: 50px;
-  top: 200px;
-  width: 220px;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: rgb(206, 142, 69);
-  font-size: 20px;
-}
 
 
 

@@ -11,7 +11,6 @@ function Card() {
     <>
       <div className="skills front"></div>
       <div className="back">
-        <h1>Back</h1>
         <div className="back-content">
           <img
             className="img-size trans-back javascript"
