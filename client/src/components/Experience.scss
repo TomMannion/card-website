@@ -1,0 +1,56 @@
+.durham-logo {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  height: auto;
+  left: 10%;
+  top: 85%;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+  transition-timing-function: ease-in;
+  //drop shadow on logo
+  -webkit-filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.2));
+}
+
+.makers-logo {
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  height: auto;
+  right: -1%;
+  top: 25%;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+  transition-timing-function: ease-in;
+  //drop shadow just on makers logo
+  -webkit-filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes flip-up {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.card.flip {
+  & .durham-logo {
+    animation: flip-up 2s forwards;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .durham-logo {
+    width: 45%;
+    top: 80%;
+    left: 5%;
+  }
+  .makers-logo {
+    width: 45%;
+    top: 17%;
+    right: -3%;
+  }
+}
+

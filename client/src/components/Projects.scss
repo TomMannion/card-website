@@ -2,14 +2,12 @@
   display: flex;
   height: 100%;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 
 .project {
   position: absolute;
   background-color: #edb362;
-  padding: 20px;
+  // padding: 20px;
   margin: 20px;
   border-radius: 25px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -20,11 +18,12 @@
 }
 .less-waste {
   background-image: url(../assets/blankback.png);
-  z-index: 1;
+  z-index: 2;
+  top: -3%;
 }
 .acebook {
   background-image: url(../assets/blankback.png);
-  z-index: 0;
+  z-index: 1;
 }
 .brewmate {
   background-image: url(../assets/blankback.png);
@@ -37,13 +36,13 @@
       transform: translate(0, 0);
     }
     100% {
-      transform: translate(220px, 0);
+      transform: translate(0px, 109%);
     }
   }
 
   @keyframes slide-right-back {
     0% {
-      transform: translate(220px, 0);
+      transform: translate(0, 109%);
     }
     100% {
       transform: translate(0, 0);
@@ -55,13 +54,13 @@
       transform: translate(0, 0);
     }
     100% {
-      transform: translate(-220px, 0);
+      transform: translate(0, 210%);
     }
   }
 
   @keyframes slide-left-back {
     0% {
-      transform: translate(-220px, 0);
+      transform: translate(0, 210%);
     }
     100% {
       transform: translate(0, 0);

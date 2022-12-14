@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function InterestsCard() {
   //   <div className="less-waste">
-  //   <h1>Less Waste More Taste</h1>
+  //   <h2>Less Waste More Taste</h2>
   //   <p>
   //     A full stack web application that allows users to search for
   //     cocktail recipes based on the ingredients they have.
@@ -11,7 +11,7 @@ function InterestsCard() {
   //   <p>Built using React, Express, MongoDB, and the CocktailDB API.</p>
   // </div>
   // <div className="Acebook">
-  //   <h1>Acebook</h1>
+  //   <h2>Acebook</h2>
   //   <p>
   //     A full stack web application inspired by facebook that allows
   //     users to post messages and pictures.
@@ -25,28 +25,16 @@ function InterestsCard() {
       <div className="back">
         <div className="back-content">
           <div className="less-waste project">
-            <h1>Less Waste More Taste</h1>
-            <p>
-              A full stack web application that allows users to search for
-              cocktail recipes based on the ingredients they have.
-            </p>
-            <p>Built using React, Express, MongoDB, and the CocktailDB API.</p>
+            <h2>Less Waste More Taste</h2>
+            <p>Turn left over alcohol into something fun!</p>
           </div>
           <div className="acebook project">
-            <h1>Acebook</h1>
-            <p>
-              A full stack web application inspired by facebook that allows
-              users to post messages and pictures.
-            </p>
-            <p>Built using Handlebars, JavaScript, Express, MongoDB.</p>
+            <h2>Acebook</h2>
+            <p>Social media platform for monsters inc fans.</p>
           </div>
           <div className="brewmate project">
-            <h1>BrewMate</h1>
-            <p>
-              A full stack web application for to store coffee recipies and save
-              other peoples.
-            </p>
-            <p>Built React, Redux for state management, MongoDB and Express</p>
+            <h2>BrewMate</h2>
+            <p>Record and share your coffee brew recipes.</p>
           </div>
         </div>
       </div>

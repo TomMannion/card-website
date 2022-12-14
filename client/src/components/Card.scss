@@ -12,8 +12,8 @@
   -webkit-box-shadow: 0 0 3px rgb(5, 5, 5);
   box-shadow: 0 0 3px rgba(88, 67, 2, 0.5);
   cursor: pointer;
-  height: 370px;
-  width: 250px;
+  height: 420px;
+  width: 280px;
   & .trans-back { 
     transform: translate(0px, 0px);
     transition: transform 2s;
@@ -41,11 +41,6 @@
   transform: rotateY(180deg);
 }
 
-.back-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .front, .back {
   height: 100%;
@@ -61,6 +56,28 @@
   height: 30%;
 }
 
+.block-1 {
+  position: absolute;
+  top: 100px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-image: url(../assets/blankback.png);
+  font-size: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.block-2 {
+  position: absolute;
+  left: 20px;
+  top: 205px;
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  background-image: url(../assets/blankback.png);
+  font-size: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
 
 .card.flip {
   --rotate-y: -180deg;
@@ -281,6 +298,12 @@
   .hand {
     padding-top: 50px;
     height: 50px;
+  }
+
+  .block-2 {
+    position: absolute;
+    left: 50px;
+    top: 220px;
   }
 }
 
