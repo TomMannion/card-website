@@ -1,23 +1,12 @@
 import "./Projects.scss";
-import { useState } from "react";
+import hand from "../assets/hand_pointing_edit.png";
 
 function InterestsCard() {
-  //   <div className="less-waste">
-  //   <h2>Less Waste More Taste</h2>
-  //   <p>
-  //     A full stack web application that allows users to search for
-  //     cocktail recipes based on the ingredients they have.
-  //   </p>
-  //   <p>Built using React, Express, MongoDB, and the CocktailDB API.</p>
-  // </div>
-  // <div className="Acebook">
-  //   <h2>Acebook</h2>
-  //   <p>
-  //     A full stack web application inspired by facebook that allows
-  //     users to post messages and pictures.
-  //   </p>
-  //   <p>Built using Handlebars, JavaScript, Express, MongoDB.</p>
-  // </div>
+  function handleTouchStart(link) {
+    //redirect to linkedin
+    console.log("touch start");
+    window.open(`${link}`, "_blank");
+  }
 
   return (
     <>
@@ -25,17 +14,32 @@ function InterestsCard() {
       <div className="back">
         <div className="back-content">
           <div className="less-waste project">
-            <h2>Less Waste More Taste</h2>
+            <a
+              href="https://github.com/TomMannion/ingredient-based-recipe-app/"
+              target="_blank"
+            >
+              <h2>Less Waste More Taste</h2>
+            </a>
             <p>Turn left over alcohol into something fun!</p>
           </div>
+          <img className="hand-1 hand-styles" src={hand} alt="hand" />
           <div className="acebook project">
-            <h2>Acebook</h2>
+            <a
+              href="https://github.com/TomMannion/acebook-monsters-inc"
+              target="_blank"
+            >
+              <h2>Acebook</h2>
+            </a>
             <p>Social media platform for monsters inc fans.</p>
           </div>
+          <img className="hand-2 hand-styles" src={hand} alt="hand" />
           <div className="brewmate project">
-            <h2>BrewMate</h2>
+            <a href="https://github.com/TomMannion/Coffee_app" target="_blank">
+              <h2>BrewMate</h2>
+            </a>
             <p>Record and share your coffee brew recipes.</p>
           </div>
+          <img className="hand-3 hand-styles" src={hand} alt="hand" />
         </div>
       </div>
     </>

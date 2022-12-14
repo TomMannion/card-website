@@ -4,6 +4,52 @@
   width: 100%;
 }
 
+.project > h2:hover{
+  color: #edb362;
+}
+
+.project > a {
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    color: #eebd78;
+  }
+}
+
+.hand-1{
+  top: 10%;
+  right: 0%;
+}
+.hand-2{
+  top: 44%;
+  right: 0%
+}
+.hand-3{
+  top: 75%;
+  right: 0%;
+}
+
+.hand-styles {
+  height: auto;
+  width: 15%;
+  animation: hand-project 2s infinite;
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+}
+
+@keyframes hand-project {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .project {
   position: absolute;
   background-color: #edb362;
@@ -74,6 +120,28 @@
     & .brewmate {
       animation: slide-left 2s forwards;
     }
+    // & .hand-styles {
+    //   visibility: visible;
+    //   opacity: 1;
+    //   transition: all 3s ease-in;
+    // }
+  }
+
+  // hovering on less-waste changes opacity of hand-style
+  .less-waste:hover + .hand-styles {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+  .acebook:hover + .hand-styles {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+  .brewmate:hover + .hand-styles {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
   }
 
   .card {
@@ -86,18 +154,21 @@
   }
 
   @media only screen and (min-width: 1200px) {
+    .less-waste {
+      top: 3%;
+    }
     @keyframes slide-right {
       0% {
         transform: translate(0, 0);
       }
       100% {
-        transform: translate(300px, 0);
+        transform: translate(0, 127%);
       }
     }
   
     @keyframes slide-right-back {
       0% {
-        transform: translate(300px, 0);
+        transform: translate(0, 127%);
       }
       100% {
         transform: translate(0, 0);
@@ -108,17 +179,29 @@
         transform: translate(0, 0);
       }
       100% {
-        transform: translate(-300px, 0);
+        transform: translate(0, 242%);
       }
     }
   
     @keyframes slide-left-back {
       0% {
-        transform: translate(-300px, 0);
+        transform: translate(0, 242%);
       }
       100% {
         transform: translate(0, 0);
       }
     }
 
+    .hand-1 {
+      top: 12%;
+      right: -5%;
+    }
+    .hand-2{
+      top: 42%;
+      right: -5%
+    }
+    .hand-3{
+      top: 72%;
+      right: -5%;
+    }
   }
