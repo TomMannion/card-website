@@ -1,52 +1,97 @@
-.linkedin {
+.t {
   position: absolute;
-  top:20%;
-}
-.github {
-  position: absolute;
-  left: 38%;
-  top: 40%;
-}
-.email {
-  position: absolute;
-  top: 60%;
+  width: 80px;
+  top: 5%;
+  left: 5%;
 }
 
-.contact-img {
-  -webkit-filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.2));
+.m {
+  position: absolute;
+  width: 80px;
+  top: 25%;
+  left: 20%;
+}
+
+.name {
+  //rubik bubble font
+  font-family: 'Rubik Bubbles', cursive;
+  position: absolute;
+  top: 58%;
+  left: 36.5%;
+}
+
+.email {
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  color: #fff;
+}
+
+.git-logo {
+  position: absolute;
+  background-image: url(../assets/github.png);
+  background-size: cover;
+  //fit background to div
+  background-repeat: no-repeat;
+  //keep aspect ratio
+  background-position: center;
+  width: 22.5%;
+  height: 15%;
+  top: 78%;
+  left: 40%;
+}
+.linked-logo {
+  //overlay color 
+  background-image: url(../assets/linked.png);
+  position: absolute;
+  background-size: cover;
+  //fit background to div
+  background-repeat: no-repeat;
+  //keep aspect ratio
+  background-position: center;
+  width: 22.5%;
+  height: 15%;
+  top: 78%;
+  left: 67%;
+}
+
+// animation to pulse on hover
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card.flip {
-  & .linkedin {
-    transform: translate(10px, -40px);
-    transition: transform 2s;
+  & .linked-logo {
+    // use pulse animation
+    animation: pulse 2s infinite;
   }
-  & .github {
-    transform: translate(40px, -20px);
-    transition: transform 2s;
+  & .git-logo {
+    animation: pulse 2s infinite;
   }
   & .email {
-    transform: translate(10px, 20px);
-    transition: transform 2s;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .contact-img {
-    width: 105px;
+    animation: pulse 2s infinite;
   }
 }
 
 
-@media only screen and (min-width: 600px) {
-  .contact-img {
-    width: 105px;
-  }
-}
 
 @media only screen and (min-width: 1200px) {
-  .contact-img {
-    width: 150px;
+  .name {
+    top: 58%;
+    left: 41%;
+  }
+  
+  .email {
+    top: 68%;
+    left: 36%;
   }
 }
 
