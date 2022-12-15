@@ -8,6 +8,8 @@
   transform-style: preserve-3d;
   transform-origin: bottom center;
   transition-timing-function: ease-in;
+  //drop opacity on makers logo
+  opacity: 0.7;
   //drop shadow on logo
   -webkit-filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.2));
 }
@@ -22,6 +24,8 @@
   transform-style: preserve-3d;
   transform-origin: bottom center;
   transition-timing-function: ease-in;
+  //drop opacity on makers logo
+  opacity: 0.7;
   //drop shadow just on makers logo
   -webkit-filter: drop-shadow(4px 7px 5px rgba(0, 0, 0, 0.2));
 }
